@@ -1,0 +1,215 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 0;
+    height: 100%;
+    display: flex;
+}
+
+/* Main container */
+#main-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1500px;
+}
+/* Category Section */
+#category-section {
+    background-color: #fff;
+    min-height: 100vh;
+    width: 25%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+h1, h2, h3 {
+    margin-bottom: 15px;
+}
+#category-section input[type="text"] {
+    margin-inline-end: 20px;
+    padding: 9px;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+#category-list {
+    margin-top: 20px; 
+}
+#category-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; 
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+button {
+    background-color: #0077cc; /* Blue color */
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px; /* Adjust padding for center alignment */
+    cursor: pointer;
+}
+button:hover {
+    background-color: #005fa3;
+}
+button:active {
+    background-color: #004a82;
+}
+
+input[type="text"], input[type="date"], select {
+    width: calc(70% - 10px); /* Adjust the width to fit both input and button */
+    padding: 8px;
+    margin-bottom: 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+input[type="text"]:focus, input[type="date"]:focus, select:focus {
+    outline: none;
+    border-color: #0077cc;
+}
+
+/* Delete Button Style */
+button.delete {
+    background-color: #f44336; /* Red color */
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px; 
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-inline-end: 15px;
+}
+button.delete:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}
+
+button.delete:active {
+    background-color: #b71c1c; /* Even darker red when clicked */
+}
+#task-section {
+    width: 50%;
+    padding: 0;
+    margin-top: 20px;
+    text-align: center;
+
+}
+#task-section h1 {
+    margin-bottom: 20px;
+}
+.form-group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+.form-group input[type="text"], 
+.form-group input[type="date"] {
+    width: 30%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+label[for="category-dropdown"] {
+    margin-top: 20px;
+    display: inline-block; 
+    width: 100%; 
+    text-align: left; 
+}
+#category-dropdown {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+#add-task-btn {
+    width: 100%;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 8px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+#task-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+#task-list li {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px; 
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#task-list li input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Analytics Section */
+#analytics-section {
+    background-color: #fff;
+    border-radius: 0;
+    padding: 20px;
+    width: 20%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    margin: 0;
+}
+#editModal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the modal */
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for a popup effect */
+    z-index: 1000; /* Make sure it stays on top */
+    width: 300px; /* Adjust width of the modal */
+}
+/* Styling for the button container */
+#editModal .button-container {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    margin-top: 20px; /* Space above the buttons */
+}
+#editModal button:first-child {
+    background-color: #28a745; /* Green for Save */
+    color: white;
+    margin-right: 5px;
+}
+#editModal button:last-child {
+    background-color: #dc3545; /* Red for Cancel */
+    color: white;
+}
+#editModal input,
+#editModal select {
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+}
+#editModal button:hover {
+    opacity: 0.9; /* Slight hover effect */
+}
+
+#editModal button {
+    margin-top: 10px;
+}
+
